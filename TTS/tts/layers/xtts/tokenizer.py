@@ -639,6 +639,8 @@ class VoiceBpeTokenizer:
         elif lang == "hi":
             # @manmay will implement this
             txt = basic_cleaners(txt)
+        elif lang == "vi":
+            txt = basic_cleaners(txt)
         else:
             raise NotImplementedError(f"Language '{lang}' is not supported.")
         return txt
