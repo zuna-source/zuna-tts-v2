@@ -6,8 +6,8 @@
                     "description": "XTTS-v2.0.3 by Coqui with 17 languages.",
                     "hf_url": [
                         "https://coqui.gateway.scarf.sh/hf-coqui/XTTS-v2/main/model.pth",
-                        "https://coqui.gateway.scarf.sh/hf-coqui/XTTS-v2/main/config.json",
-                        "https://coqui.gateway.scarf.sh/hf-coqui/XTTS-v2/main/vocab.json",
+                        "https://huggingface.co/capleaf/viXTTS/resolve/main/config.json",
+                        "https://huggingface.co/capleaf/viXTTS/resolve/main/vocab.json",
                         "https://coqui.gateway.scarf.sh/hf-coqui/XTTS-v2/main/hash.md5",
                         "https://coqui.gateway.scarf.sh/hf-coqui/XTTS-v2/main/speakers_xtts.pth"
                     ],
