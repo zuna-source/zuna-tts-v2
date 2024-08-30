@@ -229,6 +229,12 @@ _abbreviations = {
             # Korean doesn't typically use abbreviations in the same way as Latin-based scripts.
         ]
     ],
+    "vi": [
+        (re.compile("\\b%s\\." % x[0], re.IGNORECASE), x[1])
+        for x in [
+            # Korean doesn't typically use abbreviations in the same way as Latin-based scripts.
+        ]
+    ],
 }
 
 
@@ -425,6 +431,18 @@ _symbols_multilingual = {
             ("°", " 도 "),
         ]
     ],
+    "vi": [
+        (re.compile(r"%s" % re.escape(x[0]), re.IGNORECASE), x[1])
+        for x in [
+            ("&", " và "),
+            ("@", " a còng "),
+            ("%", " phần trăm "),
+            ("#", " thăng "),
+            ("$", " đô la "),
+            ("£", " pao "),
+            ("°", " độ "),
+        ]
+    ],
 }
 
 
@@ -450,6 +468,7 @@ _ordinal_re = {
     "tr": re.compile(r"([0-9]+)(\.|inci|nci|uncu|üncü|\.)"),
     "hu": re.compile(r"([0-9]+)(\.|adik|edik|odik|edik|ödik|ödike|ik)"),
     "ko": re.compile(r"([0-9]+)(번째|번|차|째)"),
+    "vi": re.compile(r"([0-9]+)(st|nd|rd|th)"),  # TODO remove
 }
 _number_re = re.compile(r"[0-9]+")
 _currency_re = {
@@ -501,6 +520,7 @@ def _expand_currency(m, lang="en", currency="USD"):
         "tr": ", ",
         "hu": ", ",
         "ko": ", ",
+        "vi": ", ",
     }
 
     if amount.is_integer():
